@@ -1,0 +1,40 @@
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: consolas;
+} 
+body{
+    position: relative;
+    background-color: rgb(87, 75, 58) ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right,#333 1px,transparent 1px),
+    linear-gradient(to bottom,#333 1px,transparent 1px);
+    background-size: 4vh 4vh;
+    min-height: 100vh;
+
+}
+.canvas{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    
+}
+.text{
+    position: absolute;
+    color:black;
+    font-size:2rem;
+    font-weight: bold;
+    color: aqua;
+    text-shadow:  0 0 15px aqua,
+    0 0 50px aqua;
+    margin-left: 20px;
+    text-transform: uppercase;
+    transform:  translate(-50%,-50%);
+    margin: 2px;
+    
+}

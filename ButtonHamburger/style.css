@@ -1,0 +1,71 @@
+body {
+    background-color: bisque;
+    display: grid;
+    place-content: center;
+   
+    min-height: 100vh;
+}
+
+.screen {
+    padding: 3rem;
+    max-width: 1200px;
+    display: flex;
+    gap: clamp(2rem, 8vw, 4rem);
+
+
+
+}
+
+
+
+button {
+    background: transparent;
+    border: 10px solid var(--button-color);
+    border-radius: 1rem;
+    border: 5px solid firebrick;
+
+
+}
+
+
+
+.button-1 .line {
+    /* transition: 1s; */
+    transition: y 300ms ease-in 300ms,
+        rotate 300ms ease-in,
+        opacity 0ms 300ms;
+    transform-origin: center;
+
+}
+
+.button-1:hover .line {
+   
+    /* transition: 1s; */
+    transition: y 600ms ease-in 300ms,
+        rotate 300ms ease-in,
+        opacity 0ms 100ms;
+}
+
+
+
+.button-1:hover :is(.top, .botton) {
+    y: 45;
+
+}
+
+.button-1:hover :is(.top, ) {
+    rotate: 45deg;
+}
+
+.button-1:hover :is(.botton, ) {
+    rotate: -45deg;
+}
+
+
+.button-1:hover :is(.mid) {
+    opacity: 0;
+}
+
+
+/* button 2 -------------------------------------------------- */
+

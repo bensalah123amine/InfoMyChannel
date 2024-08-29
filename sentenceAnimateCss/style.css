@@ -1,0 +1,44 @@
+ body{
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(white,gray ,black);
+  /* give a opacity */
+
+  filter: brightness(200%);
+
+ }
+ .container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .containertext{
+      height: 100px;
+      width: auto;
+   
+      display: flex;
+      
+     
+     
+    }
+    .letter {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 5rem;
+      text-shadow: 2px 2px 30px rgb(8, 8, 8);
+      background: linear-gradient(to right, red, yellow,purple);
+      -webkit-background-clip: text;
+      color: transparent;
+      /* لأجل دعم أفضل على متصفحات WebKit */
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      /* animation: moveDown 1s infinite; */
+    }
+   
+    @keyframes moveDown {
+      0% { top: 0; }
+      50% { top: 10px; }
+      100% { top: 0; }
+    }

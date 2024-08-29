@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background-color: bisque  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.circle{
+    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    width: 200px;
+    height: 200px;
+ border: 20px solid #fff;
+ border-radius: 50%;
+
+    
+    
+}
+.line{
+    position: absolute;
+   
+    height: 10px;
+    width: 2px;
+    border-radius: 30px;
+    animation: rot 0.04s linear forwards;
+}
+@keyframes rot {
+   
+    to{
+        background: #070;
+        box-shadow: 0 0 10px #070;
+    }
+    
+}
+

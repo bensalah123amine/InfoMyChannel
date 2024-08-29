@@ -1,0 +1,76 @@
+body{
+  background: linear-gradient(#f69d3c, #a69f3f);
+  height: 100vh;
+background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+
+}
+
+.cube {
+  
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    animation: rotateCube 10s linear infinite;
+  }
+ 
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+  img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transition: 200ms;
+   
+  
+  }
+  img:hover{
+    
+    transform: translateY(-40px) scale(1.2);
+     
+  }
+  
+  .bottom {position: absolute;
+      background-color: black;
+      width: 400px;
+      height: 200px;
+      top: 400px;
+      left: 500px;
+      border-radius: 50%;
+      filter: blur(55px);
+     transform: rotateX(60deg);
+    }
+  .face::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)); /* Gradient for reflection */
+  }
+ 
+  .front { transform: translateZ(130px)  }
+  .left { transform: rotateY(-90deg) translateZ(130px) }
+  .right { transform: rotateY(90deg) translateZ(130px) }
+  .back { transform:  translateZ(-130px)  rotateY(180deg); }  
+ 
+  @keyframes rotateCube {
+    from { transform: rotateY(0deg) ; }
+    to { transform: rotateY(360deg) ; }
+  }
+
+  
+  

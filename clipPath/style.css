@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: bisque    ;
+
+  
+}
+
+
+
+
+
+img{
+    max-width: 100%;
+    width: 300px;
+}
+.gallery{
+    background-color: aqua;
+    width: 100%;
+    display: grid;
+    
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(4,80px);
+    
+    img{
+        aspect-ratio: 1;
+        object-fit: cover;
+        grid-column: span 2;
+        grid-row: span 2;
+        clip-path:path('M2.99985 153.5C-13.3984 138.991 45.9619 19.9828 120.5 2.50002C195.038 -14.9828 293.638 75.9397 303 90.5C312.361 105.06 252.218 236.735 182 258C111.781 279.265 5.94169 175.836 2.99985 153.5Z');
+        &:nth-of-type(4){
+            grid-column: 2 / span 2;
+           
+
+        }
+
+    }
+
+}
+

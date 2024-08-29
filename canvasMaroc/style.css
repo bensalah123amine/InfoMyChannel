@@ -1,0 +1,64 @@
+ *{
+   
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgba(228, 198, 162, 0.829);
+   
+ }
+ body{
+   position: relative;
+   height: 100vh;
+ }
+h1{
+   color:white;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+   font-size:50px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5), /* Main shadow */
+   -2px -2px 4px rgba(17, 16, 16, 0.5),-2px -2px 4px rgba(90, 71, 71, 0.5);
+   background: none;
+   opacity: 0;
+   animation: animate 1000s forwards;
+}
+  @keyframes animate {
+   from {
+      opacity: 0; /* Start with opacity 0 */
+      
+  }
+  to {
+   z-index: 100;
+      opacity: 30 /* End with opacity 1 */
+  }
+  }
+
+  svg{
+   position: absolute;
+   top: 70%;
+   left: 50%;
+   
+ background: none;
+
+   stroke-dasharray: 1320;
+   stroke-dashoffset: 60;
+  
+   animation: sign 20s ease;
+   height: 100px;
+   
+  
+}
+@keyframes sign {
+   0%{
+       stroke-dashoffset: 300;
+       stroke-dasharray: 80;
+   }
+   100%{
+       stroke-dashoffset: 20;
+       stroke-dasharray: 0;
+   }
+   
+}

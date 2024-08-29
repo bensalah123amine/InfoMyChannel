@@ -1,0 +1,227 @@
+body{
+   
+    background: linear-gradient(rgb(219, 54, 54),rgb(240, 29, 240));
+    background-repeat:no-repeat ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  
+
+}
+.contu{
+    width: 200px;
+    height: 40px;
+    border-radius: 2rem;
+    background-color: #0f0c16;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+overflow: hidden;
+    
+}
+.front{
+    position: absolute;
+    inset: 2px;
+    background-color: brown;
+    border-radius: 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+
+}
+.contu::before{
+    content: "";
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;
+
+}
+.contu::after{
+    content: "";
+    position:absolute;
+    width: 200px;
+    height: 200px;
+    background-image: conic-gradient(transparent,transparent,transparent,#00ff00);
+    animation: animate 4s infinite;
+    animation-delay: 2s;
+
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+   
+    flex-direction: column;
+   
+    
+}
+h1{
+    color: white;
+}
+
+button{
+    margin-top: 100px;
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif; 
+   
+    border-radius: 2rem;
+    border: none;
+   
+}
+
+.button1{
+    color: blue;
+    background: rgb(31, 29, 29);
+    box-shadow: 1px 3px 5px  rgba(71, 201, 11, 0.3),
+        4px 5px 3px  rgba(14, 36, 4, 0.3);  
+}
+.button2{
+    margin-top: 50px;
+    position: relative;
+    background: #8c66e6;
+    height: 40px;
+    width: 200px;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1em;
+    font-weight: 700px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    color: white; 
+   
+}
+.button2:hover {
+    background:green;
+    color:burlywood;
+    letter-spacing: O.24em;
+    box-shadow:  0 0 35px green;
+}
+.button2::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+   border-radius: 2em;
+    background: rgb(223, 14, 223);  
+}
+span{
+position: relative;
+}
+
+span::before{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: -9px;
+    right: 0px;
+    background-color: #8c66e6; 
+    z-index: 100;
+    transition: 2s;
+}
+span:hover{
+    color: green;
+}
+
+span::after{
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    bottom:-9px;
+    right: 70px;
+    background-color: #8c66e6; 
+    z-index: 100;
+    transition: 2s;
+}
+ span:hover::before {
+    
+    right:70px; background-color: green;
+     
+}
+span:hover::after {
+    
+    right:0px; 
+    background-color: green;
+     
+     
+}
+
+/* button 3 -------------------------------------------------------------------------*/
+.button3{
+    margin-top: 50px;
+    position: relative;
+    border: 3px solid; 
+    height: 40px;
+    width: 200px;
+    border-radius: 2rem;
+    box-shadow:
+    inset 0 0 0.5em 0 rgb(137, 231, 73),
+     0 0 0.5rem 0 rgb(137, 231, 73)
+      ;
+      text-shadow: 0 0 0.135em white ,
+      0 0 0.45em  rgb(137, 231, 73);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1em;
+    font-weight: 700px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    color: rgb(137, 231, 73);
+    perspective: 10em; 
+}
+
+
+.button3::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    background-color: rgb(137, 231, 73);
+    width: 100%;
+    height: 100%;
+    transform: perspective(4em) rotateX(48deg) scale(1,0.3) ;
+    filter: blur(1rem); 
+}
+.button3:hover::before {
+    box-shadow: 0 0 3rem rgb(137, 231, 73),
+     0 0 5rem  rgb(137, 231, 73);
+     transform: perspective(0.4em) rotateX(48deg) scale(1,0.3) ;
+
+}
+.button3:hover {
+    box-shadow: 0 0 3rem rgb(137, 231, 73),
+     0 0 5rem rgb(137, 231, 73);
+
+}
+
+
+
+
+
+

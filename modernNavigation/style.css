@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color:bisque;
+    height: 100vh;
+   
+}
+
+.nav{
+    background: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    
+}
+ul{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    transition: 0;
+    
+}
+a{
+    background-color: white;
+    padding: 0.8rem;
+    position: relative;
+    border-radius: 15px 0px 0px 15px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none; 
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+a:hover{
+    background-color: bisque;
+    color: white;
+ 
+   
+}
+a:not(:hover) {
+    background-color: rgb(250, 240, 208 ,0.4) ;
+}
+a:hover:after{
+    transition: 1s ;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -30px;
+    right: 0px;
+    
+    border-radius: 25px 25px;
+    box-shadow: 15px 15px bisque ;
+   
+}
+a:hover::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -30px;
+    right: 0px;
+    border-radius: 25px 25px;
+ 
+    box-shadow: 15px -15px bisque ;
+}
+
+.main{
+   
+   
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  
+    gap: 300px;
+}
+.main > *{
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    height: 500px;
+    background-color: brown;
+    box-shadow: inset 5px 5px 2rem rgb(94, 20, 20),
+    inset -4px -4px 2rem rgb(94, 20, 20)
+    ;
+
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 100px;
+    box-shadow: -3px -3px 0.6em rgb(59, 59, 59),
+    -2px -2px 0.5em black,
+    3px 3px  rgb(59, 59, 59),
+    2px 2px 0.5em black;
+
+}
